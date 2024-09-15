@@ -1,0 +1,106 @@
+/* src/components/SplashScreen.css */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    #bcc6cc,
+    #eee,
+    #bcc6cc
+  ); /* Or any background color you prefer */
+  z-index: 9999; /* Ensure it's on top */
+}
+
+.splash-logo {
+  width: 150px; /* Adjust as necessary */
+  height: auto;
+}
+
+.loading-animation {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.splash-screen::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  position: absolute;
+  z-index: 1000;
+  transform: translateX(100%) rotate(30deg);
+  animation: shine 3s infinite ease-in;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(128, 186, 232, 0) 100%
+  );
+}
+
+.container {
+  margin: 70px auto;
+  width: 500px;
+  text-align: center;
+}
+
+.progress {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 18px;
+  background-color: #ee303c;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-striped .progress-bar {
+  background-color: #fcbc51;
+  width: 100%;
+  background-image: linear-gradient(
+    45deg,
+    rgb(252, 163, 17) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgb(252, 163, 17) 50%,
+    rgb(252, 163, 17) 75%,
+    transparent 75%,
+    transparent
+  );
+  animation: progressAnimationStrike 6s;
+}
+
+@keyframes progressAnimationStrike {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(30deg);
+  }
+  80% {
+    transform: translateX(-100%) translateY(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(30deg);
+  }
+}

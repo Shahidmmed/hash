@@ -1,0 +1,59 @@
+@import url("./fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#topnav a.active {
+  border-bottom: 2px solid #705d31;
+}
+
+.App {
+  background: #fdf3df;
+}
+
+.mhome-txt {
+  font-family: "Kelsi 1 fill", sans-serif;
+  color: #f2b758;
+  -webkit-text-stroke: 2px #713f12;
+}
+
+.home-txt {
+  font-family: "Kelsi 1 fill", sans-serif;
+  color: #f0d1a3;
+  -webkit-text-stroke: 4px #713f12;
+}
+
+.hcard-txt {
+  font-family: "Cooper Black", sans-serif;
+  text-shadow: 2px #713f12;
+  -webkit-text-stroke: 4px #713f12;
+}
+
+.coop {
+  font-family: "Cooper Black", sans-serif;
+}
+
+.coop-bold {
+  font-family: "Cooper Black", sans-serif;
+  text-shadow: 2px #713f12;
+  -webkit-text-stroke: 4px #713f12;
+}
+
+.home-btn {
+  text-decoration: none;
+  display: block;
+}
+
+.home-btn:hover {
+  background: #713f12;
+}
+
+.arc-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Adjust as needed */
+  position: relative;
+}
